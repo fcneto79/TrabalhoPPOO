@@ -1,4 +1,4 @@
-//package comandos;
+package comandos;
 
 public class Comando {
     // primeira palavra que representa o comando
