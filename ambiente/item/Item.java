@@ -1,4 +1,4 @@
-package item;
+package ambiente.item;
 
 public class Item {
 
