@@ -3,7 +3,7 @@
 public class PalavrasComando {
     // um vetor constante que guarda todas as palavras de comandos válidas
     private static final String[] comandosValidos = {
-        "ir", "entrar", "sair", "ajuda", "verificar", "pegar"
+        "ir", "sair", "ajuda", "verificar", "pegar"
     };
 
     public static String getComandos(){
