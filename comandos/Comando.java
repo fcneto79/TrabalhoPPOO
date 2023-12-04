@@ -1,25 +1,43 @@
 package comandos;
 
-public class Comando {
-    // primeira palavra que representa o comando
-    private String palavraDeComando;
-    // segunda palavra que representa um complemento do comando
-    private String segundaPalavra;
+import java.util.ArrayList;
 
-    /**
-     * Cria um objeto comando. Primeira e segunda palavra devem ser  fornecidas, mas 
-     * qualquer uma (ou ambas) podem ser null.
-     * @param primeiraPalavra A primeira palavra do comando. Null se o comando não foi reconhecido.
-     * @param segundaPalavra A segunda palavra do comando.
+/**
+ * A classe Comando representa um comando inserido pelo jogador no jogo, contendo uma palavra de comando válida.
+ */
+public class Comando {
+    private String palavraDeComando;
+    private static ArrayList<String> comandosValidos = new ArrayList<>();
+
+    /** 
+     * Inicialização estática da lista de comandos válidos
      */
-    public Comando(String primeiraPalavra, String segundaPalavra) {
-        palavraDeComando = primeiraPalavra;
-        this.segundaPalavra = segundaPalavra;
+    static {
+        ArrayList<String> palavras = new ArrayList<>();
+        palavras.add("norte");
+        palavras.add("sul");
+        palavras.add("leste");
+        palavras.add("oeste");
+        palavras.add("pegar");
+        palavras.add("usar");
+        palavras.add("ajuda");
+        comandosValidos.addAll(palavras);
+    }
+    
+    /**
+     * Construtor da classe Comando.
+     * Cria um objeto comando com a palavra fornecida.
+     *
+     * @param palavra A palavra de comando.
+     */
+    public Comando(String palavra) {
+        palavraDeComando = palavra;
     }
 
     /**
-     * Retorna a palavra de comando (a primeira palavra) deste comando.
-     * Se o comando não foi entendido, o resultado eh null.
+     * Obtém a palavra de comando deste comando.
+     * Se o comando não foi reconhecido, o resultado é null.
+     *
      * @return A palavra de comando.
      */
     public String getPalavraDeComando() {
@@ -27,23 +45,11 @@ public class Comando {
     }
 
     /**
-     * @return A segunda palavra deste comando. Retorna null se não existe segunda palavra.
+     * Verifica se o comando é válido.
+     *
+     * @return true se o comando foi reconhecido como válido, false caso contrário.
      */
-    public String getSegundaPalavra() {
-        return segundaPalavra;
-    }
-
-    /**
-     * @return true se o comando não foi entendido.
-     */
-    public boolean ehDesconhecido() {
-        return (palavraDeComando == null);
-    }
-
-    /**
-     * @return true se o comando tem uma segunda palavra.
-     */
-    public boolean temSegundaPalavra() {
-        return (segundaPalavra != null);
+    public boolean ehValido() {
+        return comandosValidos.contains(palavraDeComando);
     }
 }

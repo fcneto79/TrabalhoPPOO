@@ -1,0 +1,39 @@
+Relatório da execução: 2023-12-03T22:38:25.970250293
+Lista de comandos utilizados:
+- leste
+- leste
+Lista de cenários passados:
+- Hall
+- Cozinha
+- Saida
+Relatório da execução: 2023-12-03T23:29:35.309007539
+Lista de comandos utilizados:
+- leste
+Lista de cenários passados:
+- Hall
+- Cozinha
+Relatório da execução: 2023-12-03T23:50:16.947081296
+Lista de comandos utilizados:
+- norte
+- pegar
+- ajuda
+- sul
+- oeste
+- leste
+- norte
+- oeste
+- sul
+- oeste
+- oeste
+Lista de cenários passados:
+- Hall
+- Quarto
+- Quarto
+- Hall
+- Corredor Misterioso
+- Hall
+- Quarto
+- Cozinha
+- Corredor Misterioso
+- Sotao
+- Saida
